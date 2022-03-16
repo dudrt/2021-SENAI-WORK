@@ -1,0 +1,329 @@
+#grupo {
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Elementos com o ID "titulo" */
+
+#ttl {
+    font-family: sans-serif;
+    color: #006bb7;
+}
+
+
+/* Elementos com o ID "subtitulo" */
+
+#sttl {
+    font-family: sans-serif;
+    color: #006bb7;
+    /* margin-left: 10%; */
+}
+
+#check {
+    display: inline-block;
+}
+
+
+/* Elementos de tag <fieldset>*/
+
+fieldset {
+    border: 0;
+}
+
+
+/* Elemento de tag <body> */
+
+body {
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #006bb7;
+    /* margin-left: 30%; */
+    margin-top: 2%;
+    place-items: center;
+    display: grid;
+}
+
+
+/* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
+
+input,
+select,
+textarea,
+button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #006bb7;
+    border-radius: 5px;
+    border-color: #006bb7;
+}
+
+
+/* Elementos de classe "grupo" nos estados das pseudoclasses "before" e "after" */
+
+.grupo:before,
+.grupo:after {
+    display: table;
+}
+
+
+/* Elementos de classe "grupo" no estado da pseudoclasse "after" */
+
+.grupo:after {
+    clear: both;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 90;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+/* Elementos de classe "campo" */
+
+.campo {
+    margin-bottom: 1em;
+}
+
+
+/* Elementos de classe "campo" de tag <label> */
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: #006bb7;
+    display: block;
+}
+
+
+/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
+
+fieldset.grupo .campo {
+    float: left;
+    margin-right: 1em;
+}
+
+
+/* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select,
+.campo textarea {
+    padding: 0.2em;
+    border: 1px solid #006bb7;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+
+/* Elementos de classe "campo" de tag <select> e <option>*/
+
+.campo select option {
+    padding-right: 1em;
+}
+
+
+/* Elemento de classe "campo" com tag <input>, <select> e <textarea> tocas com estado da pseudoclasse "focus"*/
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    background: #E0E0F8;
+}
+
+
+/* Elemento de classe "botao" */
+
+.botao {
+    font-family: sans-serif;
+    /* font-size: 1em; */
+    /* color: #d81767; */
+    border-color: #006bb7;
+    border-radius: 5px;
+    /* padding: 8px 8px; */
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 1px 1px;
+    background: #006bb7;
+    border: 0;
+    margin-bottom: 2px;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    /* transform: translate(-50%, -50%) */
+    cursor: pointer;
+}
+
+
+/* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
+
+.botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+
+
+/* Elementos de classe botão e de tag <select> */
+
+.botao,
+select {
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    -webkit-animation-name: fadeIn;
+    /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: fixed;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #006bb7;
+    color: white;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #006bb7;
+    color: white;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: -300px;
+        opacity: 0
+    }
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* tabela */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tab {
+    table-layout: fixed;
+}
+
+#borda {
+    border: 2px groove black;
+}
+
+.pegarExa {
+    color: #313131;
+}
