@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+</head>
+
+<body>
+    <h1 id="tt">Recupere sua senha</h1><br>
+    <div class="campo">
+        <label for="email"><strong>Email</strong></label>
+        <input type="email" name="email" id="email" placeholder="Digite seu E-mail..." style="width:200px;" required>
+    </div>
+    <div class="campo">
+        <label for="cpf"><strong>CPF</strong></label>
+        <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF..." style='height: 24px; width: 210px;' required>
+    </div>
+    <button class="botao" id="enviar" style=' width: 130px;' onclick="RecSenha()">Enviar</button>
+    <a href="T1-login.html"><button class='botao'style='height: 40px; width: 130px;'>Voltar á pagina inicial</button></a>
+    <script src="script.js"></script>
+</body>
+
+</html>
