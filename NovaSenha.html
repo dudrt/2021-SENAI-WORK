@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Senha</title>
+    <style>
+        @import url(beleza.css);
+        #meio {
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='ttl'>Trocar senha!</h1><br>
+    <fieldset class="grupo">
+        <div id='meio' class="campo">
+            <label for="primeirasenha">Digite sua senha</label>
+            <input type="password" id="primeirasenha"><br>
+            <label for="segundasenha">Confirme sua senha</label>
+            <input type="password" id="segundasenha"><br>
+            <button class='botao' onclick="ConfirmaNovaSenha()" style='height: 24px; width: 130px;'>Confirmar</button>
+            <a href="T1-login.html"><button class='botao'style='height: 40px; width: 130px;'>Voltar á pagina inicial</button></a>
+            <script src="script.js"></script>
+        </div>
+    </fieldset>
+</body>
+
+</html>

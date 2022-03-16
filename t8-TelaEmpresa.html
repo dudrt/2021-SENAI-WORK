@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        @import url(beleza.css);
+        th{
+            font-size: x-large;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body onload="rodarempresa()">
+    <a href="T7-CadEmpresa.html"><button class="botao">Cadastrar Empresas</button></a>
+    <a href="t5-TelaAdm.html"><button class="botao">Voltar</button></a>
+    <table class="table table-sm table-bordered"  id="mostrar">
+        <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Ramo da Empresa
+            </th>
+            <th>
+                CNPJ
+            </th>
+            <th>
+                Tipo da Empresa
+            </th>
+            <th>
+                CEP
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Mais Info
+            </th>
+        </tr>
+    </thead>
+    </table>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 id="nometipotel"></h2>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <tr>
+                        <th id="cnpj"></th>
+                        <th id="ramo"></th>
+                        <th id="email"></th>
+                    </tr>
+                    <tr>
+                        <th id="cep"></th>
+                        <th id="rua"></th>
+                        <th id="bairro"></th>
+                    </tr>
+                    <tr>
+                        <th id="cidade"></th>
+                        <th id="estado"></th>
+                        <th id="pais"></th>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

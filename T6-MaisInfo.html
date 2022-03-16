@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Informações</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+
+</head>
+
+<body>
+    <h3>Tela para adicionar novas Informações</h3>
+    <h6>Campos em branco e sem *(Obrigatório) continuarão com as mesmas Informações</h6>
+
+
+    <fieldset class='grupo'>
+        <div class='campo'>
+            <label for="nome"><strong></strong>Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome...">
+        </div>
+        <div class='campo'>
+            <label for="sobrenome"><strong>Sobrenome</strong></label>
+            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome...">
+        </div>
+        <div class='campo'>
+            <label for="data"><strong>Data de Nascimento</strong></label>
+            <input type="date" max="2007-12-31" min="2000-12-31" id="data" style='height: 33px;' placeholder="">
+        </div>
+        <div class='campo'>
+            <label for="rg"> <strong>*RG</strong></label>
+            <input type="number" id="rg" style='height: 33px;' placeholder="Digite seu RG...">
+
+        </div>
+    </fieldset>
+    <fieldset class='grupo'>
+
+        <div class='campo '>
+            <label for="radio"><strong> Sexo:</strong></label>
+            <input type="text" onkeydown="apagar(this.id)" list="aaaaa" id="sx" placeholder="Selecione seu sexo..." style="width: 210px;">
+            <datalist id="aaaaa">
+                <option value="Feminino"></option>
+                <option value="Masculino"></option>
+                <option value="Não informar"></option>
+            </datalist>
+
+
+        </div class='campo '>
+        <div class='campo '>
+            <label for="sangue"><strong> *Tipo sanguinho</strong></label>
+            <input type="text" list="TipoSang" onkeydown="apagar(this.id)" id="sangue" placeholder="Selecione seu tipo sanguineo..."style="width: 215px;">
+            <datalist id="TipoSang">
+                <option value="A-"></option>
+                <option value="A+"></option>
+                <option value="B-"></option>
+                <option value="B+"></option>
+                <option value="AB-"></option>
+                <option value="AB+"></option>
+                <option value="O+"></option>
+                <option value="O-"></option>
+            </datalist>
+        </div>
+        <div class='campo '>
+
+            <label for="deficheck"><strong> *Possui deficiencia? </strong></label>
+            <input type="radio" name="defi" id="simdefi" onclick="checardefi()">sim
+            <input type="radio" name="defi" id="naodefi" onclick="checardefi()">Não
+
+
+        </div>
+        <div class='campo '>
+            <div id="deficheck"></div>
+        </div>
+    </fieldset>
+
+
+    <fieldset class='grupo '>
+        <div class='campo '>
+            <label><strong> *É jovem aprendiz?</strong></label>
+            <input type="text" list='Jl' onkeydown="apagar(this.id)" id="JA" style="width: 180px;"placeholder='Selecione...'>
+            <datalist id="Jl">
+                <option value="Sim"></option>
+                <option value="Não"></option>
+            </datalist>
+        </div>
+        <div class='campo '>
+            <label for="empresaAtual"><strong> *Qual empresa você trabalha?</strong></label>
+            <input type="text" onkeydown="apagar(this.id)" list="Empresa" id="empresaAtual" onclick="verEmpresas()"placeholder='Selecione...'>
+            <datalist id="Empresa">
+                <option value="Nenhuma"></option>
+                <option value="Outra"></option>
+            </datalist>
+        </div>
+        <div class='campo '>
+            <label for=""><strong> Motivo para ser JA</strong></label>
+            <textarea id="motivacao" cols="21" rows="1" maxlength="100" style="resize: unset; "placeholder='Escreva...'></textarea>
+        </div>
+
+
+    </fieldset>
+
+    <fieldset class='grupo '>
+        <div class='campo '>
+            <label for="datafim"><strong> *Data de finalização</strong></label>
+            <input type="date" min="2021-01-01" max="2024-12-31" id="datafim" style="height: 33px;width: 198px;">
+        </div>
+        <div class=' campo '>
+            <label for=""><strong> *Grau de Escolaridade</strong></label>
+            <input type="text" list="GrauEscola" onkeydown="apagar(this.id)" id="grauescola"placeholder='Selecione...'>
+            <datalist id="GrauEscola">
+                <option value="Cursando Ensino Fundamental"></option>
+                <option value="Cursando o Ensino Médio"></option>
+                <option value="Ensino Médio Completo"></option>
+                <option value="Cursando Técnico ou Graduação"></option>
+            </datalist>
+        </div>
+        <div class='campo '>
+            <label for="TurnoEstuda"><strong> *Turno que estuda</strong></label>
+            <input type="text" list="TurnoEstuda" onkeydown="apagar(this.id)" id="turno"placeholder='Selecione...'>
+            <datalist id="TurnoEstuda">
+                <option value="Matutino"></option>
+                <option value="Vespertino"></option>
+                <option value="Noturno"></option>
+                <option value="Não estou estudando no momento"></option>
+            </datalist>
+        </div>
+
+
+    </fieldset>
+
+    <fieldset class='grupo'>
+        <div><label for=""><strong> *Aprendizagens cursadas</strong></label></div> <br>
+        <div class='campo'>
+            <input type="checkbox" id="um"> Aprendizagem Industrial de Assistente Administrativo <br>
+            <input type="checkbox" id="dois"> Aprendizagem Industrial de Assistente de Logística <br>
+            <input type="checkbox" id="tres"> Aprendizagem Industrial de Assistente de Produção <br>
+            <input type="checkbox" id="quatro"> Aprendizagem Industrial de Eletricista de Manutenção <br>
+            <input type="checkbox" id="cinco"> Aprendizagem Industrial de Instalador e Reparador <br> de Equipamentos de Telecomunicações <br>
+        </div>
+
+        <div class='campo'>
+            <input type="checkbox" id="seis"> Aprendizagem Industrial de Informática <br>
+            <input type="checkbox" id="sete"> Aprendizagem Industrial de Eletrônico de Manutenção Industrial <br>
+            <input type="checkbox" id="oito"> Aprendizagem Industrial de Oficial de Edificações <br>
+            <input type="checkbox" id="nove"> Nenhum <br>
+            <input type="checkbox" id="dez"> Outro <br>
+        </div>
+
+
+
+
+    </fieldset>
+
+
+    <fieldset class='grupo '>
+        <div class='campo '>
+            <label for="numerocasa">*Nº da casa</label>
+            <input type="number" id="numerocasa" style='height: 33px; 'placeholder='Digite seu número...'>
+        </div>
+        <div class='campo '>
+            <label for="rua">*Rua</label>
+            <input type="text" id="rua"placeholder='Digite sua rua...'>
+        </div>
+        <div class='campo '>
+            <label for="comp">Complemeto</label>
+            <input type="text" id="comp"placeholder='Digite o complemeto...'>
+        </div>
+        <div class='campo '>
+            <label for=""><strong>*CEP</strong></label>
+            <input type="text" placeholder="Digite seu CEP..." id="cep" onkeyup="CepTestar()" maxlength="8">
+        </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+        <div class=campo>
+            <label for="bairro">*Bairro</label >
+            <input type="text" id="bairro"placeholder='Digite seu bairro...'>
+        </div>
+        <div class=campo>
+            <label for="cidade">*Cidade</label>
+            <input type="text" id="cidade"placeholder='Digite sua cidade...'>
+        </div>
+        <div class=campo>
+            <label for="estado">*Estado</label>
+            <input type="text" id="estado"placeholder='Digite seu estado...'>
+        </div>
+        <div class=campo>
+            <label for="pais">*Pais</label>
+            <input type="text" id="pais"placeholder='Digite seu pais...'>
+        </div>
+
+    </fieldset>
+    <br>
+    <button onclick="carregaNovaInfo()" class=botao style= 'width: 130px;'>Confirmar</button>
+    <a href="T4-telauser.html"><button class='botao'style='height: 40px; width: 130px;'>Voltar</button></a>
+    <br><br>
+    <script src="script.js"></script>
+</body>
+
+</html>

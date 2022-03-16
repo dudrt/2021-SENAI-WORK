@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Empresa</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+</head>
+
+<body>
+
+    
+    <h1 id="ttl">Cadastro da Empresa</h1><br>
+    <p id="sttl">*Preencha todos os campos</p><br>
+
+    <fieldset class="grupo">
+        <div class="campo">
+            <label for="nome"><strong>Nome </strong></label>
+            <input type="text" placeholder="Digite Nome da Empresa..." id="nome">
+        </div>
+        <div class="campo">
+            <label for='CNPJ'><strong>CNPJ</strong></label>
+            <input type="number" placeholder="Digite CNPJ..." id="cnpj" style='height: 22px;width: 198px;'></label>
+        </div>
+        <div class="campo">
+            <label for="ramo"><strong>Ramo da empresa</strong></label>
+            <input type="text" placeholder="Digite Ramo da empresa..." id="ramo">
+        </div>
+    </fieldset>
+
+
+
+    <fieldset class="grupo">
+        <div class='campo'>
+            <label for=""><strong>CEP </strong></label> 
+            <input type="text" placeholder=" CEP..." id="cep" onkeyup="CepTestar()" maxlength="8"  style='height:18px;width:100px;' >
+            
+        </div>
+        <div class='campo'>
+            <label for=""><Strong>Nº</Strong></label>
+            <input type="number" placeholder="NM Empresa..." id="nmemp" style='height:22px;width:70px;'>
+        </div>
+        <div class='campo'>
+            <label for=""><strong>Rua</strong></label>
+            <input type="text" placeholder="Digite Rua..." id="rua">
+        </div>
+        <div class='campo'>
+            <label for=""><strong>Bairro</strong></label>
+            <input type="text" placeholder="Digite Bairro..." id="bairro">
+        </div>
+
+    </fieldset>
+    <fieldset class="grupo">
+        <div class='campo'>
+            <label for=""><strong>Cidade</strong></label>
+            <input type="text" placeholder="Digite Cidade..." id="cidade">
+        </div>
+        <div class='campo'>
+            <label for=""><strong>Estado</strong></label>
+            <input type="text" placeholder="Estado" id="estado">
+        </div>
+        <div class='campo'>
+            <label for=""><strong>País</strong></label>
+            <input type="text" placeholder="Digite seu País..." id="pais">
+
+        </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+        <div class='campo'>
+            <label for="email"><strong>Email</strong></label>
+            <input type="text" placeholder="Digite seu Email..." id="email">
+        </div>
+        <div class='campo'>
+            <label for="telefone"><strong>Telefone</strong></label>
+            <input type="text" onkeydown="arrumatelefone(this.id)" maxlength="14" placeholder="Digite seu Telefone..." id="telefone">
+        </div>
+        <div class='campo'>
+            <label for=""><strong>Tipo de Empresa</strong></label>
+            <input type="radio" id="micro" name="tipoemp" onclick="micro()">Micro Empresa<label id="microt"></label>
+            <input type="radio" id="pequeno" name="tipoemp" onclick="pequeno()">Pequena Empresa<label id="pequenot"></label>
+            <input type="radio" id="medio" name="tipoemp" onclick="medio()">Média Empresa<label id="mediot"></label>
+            <input type="radio" id="macro" name="tipoemp" onclick="macro()">Macro Empresa<label id="macrot"></label>
+        </div>
+    </fieldset>
+    <fieldset class="grupo">
+         <div class="campo">
+             <label for=""><strong>E-mail da empresa para login</strong></label>
+            <input type="text" id="emailemp">
+         </div>
+         <div class="campo">
+             <label for=""><strong>Senha da empresa para login</strong></label>
+             <input type="password" id="senhaemp">
+         </div>
+    </fieldset>
+    <button class="botao" onclick="registrarEmp()">Registrar</button>
+    <a href="t8-TelaEmpresa.html"><button class="botao">Voltar</button></a>
+    <div id="mostrando" style="color: red;"></div>
+</body>
+<script src="script.js"></script>
+
+
+</html>

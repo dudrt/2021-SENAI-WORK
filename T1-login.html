@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+</head>
+
+<body>
+
+    <h1 id="ttl">Login</h1>
+    <div class="campo">
+        <label for="nome"><strong>E-mail:</strong></label>
+        <input type="email" name="email" id="email" placeholder="Digite seu E-mail..." style="width:200px;" required>
+    </div>
+    <div class="campo">
+        <label for="senha"><strong>Senha: </strong></label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." style='height: 24px; width: 210px;' required>
+    </div>
+
+
+    <fieldset class="grupo">
+        <center>
+            <button class="botao" id="bLogar" onclick="login()" style='height: 30px;'>Confirma</button><br>
+            <a href="T2-cadastro.html"><button  class="botao" id="cadastrar">Quero fazer meu cadastro</button>
+            <a href="T3-recSenha.html"><button class="botao" id="bEqcSenha" >Esqueci minha senha</button></a>
+            </a>
+        </center>
+    </fieldset>
+    <script src="script.js"></script>
+</body>
+
+</html>

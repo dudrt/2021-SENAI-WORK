@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+    <link rel="shortcut icon" href="https://cursos.sesisenai.org.br/imgs/template/icon.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style type="text/css">
+        @import url(beleza.css);
+    </style>
+
+</head>
+
+<body>
+
+    <h1 id="ttl">Complete com suas informaçoes:</h1><br>
+    <p id="sttl">Preencha todos os campos</p><br>
+
+    <fieldset class="grupo">
+        <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+        <div class="campo">
+            <label for="nome"><strong>Nome</strong></label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu Nome..." required>
+        </div>
+
+        <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+        <div class="campo">
+            <label for="sobrenome"><strong>Sobrenome</strong></label>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Digite seu Sobrenome..." required>
+        </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+        <!-- Campo de email com-->
+        <div class="campo">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" placeholder="Digite seu E-mail..." required>
+        </div>
+
+        <!-- confirma email -->
+        <div class="campo">
+            <label for="confemail"><strong>Confirma Email</strong></label>
+            <input type="email" name="email" id="confEmail" placeholder="Confirme seu E-mail..." required>
+        </div>
+
+    </fieldset>
+
+    <fieldset class="grupo">
+        <!-- telefone -->
+        <div class="campo">
+            <label for="tel"><strong>Telefone</strong></label>
+            <input type="tel" name="tel" id="tel" onkeydown="arrumatelefone(this.id)" maxlength="14" placeholder="Digite seu Telefone..." style='height: 24px; width: 200px;' required>
+        </div>
+        <!-- cpf -->
+        <div class="campo">
+            <label for="cpf"><strong>CPF</strong></label>
+            <input type="text" name="cpf" onkeydown="arrumacpf(this.id)" id="cpf" maxlength="14" max="14" placeholder="Digite seu CPF..." style='height: 24px; width: 200px;' required>
+        </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+        <!-- data Nascimento -->
+        <div class="campo">
+            <label for="dtNasc"><strong>Data de Nascimento: </strong></label>
+            <input type="date" name="dtNasc" id="dtNasc" max="2007-12-31" min="2000-12-31" placeholder="Digite sua Data de Nascimento..." required>
+        </div>
+        <form action="/action_page.php">
+            <strong></strong>
+            <p>Selecione o sexo:</p>
+            <input type="radio" id="fem" name="sexo" value="fem"><label for="fem">Feminino</label><br>
+            <input type="radio" id="masc" name="sexo" value="masc"><label for="masc">Masculino</label><br>
+            <input type="radio" id="nInf" name="sexo" value="nInf"><label for="nInf">Não informar</label>
+        </form>
+    </fieldset><br>
+
+    <fieldset class="grupo">
+        <!-- senha -->
+        <div class="campo">
+            <label for="senha"><strong>Senha: </strong></label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha..." style='height: 24px; width: 210px;' required>
+        </div>
+        <!-- confirma senha -->
+        <div class="campo">
+            <label for="confSenha"><strong>Confirme sua senha</strong></label>
+            <input type="password" name="confSenha" id="confSenha" placeholder="Digite novamente..." style='height: 24px; width: 210px;' required>
+        </div>
+    </fieldset>
+    <div>
+        <label for="">Se você é um admin, preencha este campo com a senha que foi dada a você</label>
+        <input type="password" id="adm" placeholder="Senha de Admin" style='height: 24px; width: 180px;'><br>
+    </div>
+    <div><button class='botao' id="cad" class="button" onclick="registro()" style='height: 24px; width: 90px;'>Cadastrar</button>
+    <button class='botao' id="limpa" class="button" onclick="limpa()" style='height: 24px; width: 90px;'>Limpar</button></div>
+    <a href="T1-login.html"><button class='botao'style='height: 40px; width: 130px;'>Voltar á pagina inicial</button></a>
+    <script src="script.js"></script>
+</body>
+
+</html>
